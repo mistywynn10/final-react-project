@@ -15,6 +15,7 @@ const Movies = () => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
 
+  useEffect(() => {
   const fetchMovies = async () => {
     try {
       setLoading(true);
@@ -38,7 +39,6 @@ const Movies = () => {
     }
   };
 
-  useEffect(() => {
     if (search) {
       fetchMovies();
     }

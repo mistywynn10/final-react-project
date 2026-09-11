@@ -10,6 +10,7 @@ const MovieInfo = () => {
   const [movie, setMovie] = useState({});
   const [loading, setLoading] = useState(true);
 
+  useEffect(() => {
   async function fetchMovie() {
     try {
       const { data } = await axios.get(
@@ -23,8 +24,6 @@ const MovieInfo = () => {
       setLoading(false);
     }
   }
-
-  useEffect(() => {
     fetchMovie();
   }, [id]);
 
