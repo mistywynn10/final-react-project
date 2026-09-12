@@ -48,3 +48,17 @@
   background-color: #ddd;
   border-radius: 12px;
 }
+
+@media (max-width: 768px) {
+  .movie-info__container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .movie-info__poster img,
+  .movie-info__no-poster {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+  }
+}
